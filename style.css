@@ -1,40 +1,53 @@
-/* style.css */
+/* Resetting margin and padding for all elements */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body, html {
-    width: 100%;
+/* Full height for html and body */
+html, body {
     height: 100%;
-    font-family: 'YourCustomFont', sans-serif; /* Custom font */
-    overflow: hidden;
+    font-family: 'Your Custom Font', sans-serif; /* Use your custom font here */
 }
 
+/* Video container styling */
 .video-container {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
+/* Video styling */
 #background-video {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Maintain aspect ratio */
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
     transform: translate(-50%, -50%);
 }
 
+/* Centered text styling */
 .centered-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 11px; /* Font size set to 11px */
-    color: #fff; /* Text color */
+    color: white; /* Text color */
+    font-size: 3em; /* Adjust text size */
     text-align: center;
+    z-index: 1; /* Ensures text is on top of the video */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: Add shadow for better visibility */
 }
+
+/* Example @font-face usage for custom font */
+@font-face {
+    font-family: 'Your Custom Font'; /* Replace with your font name */
+    src: url('calocalotta/fatfat2/Font.woff') format('woff'); /* Adjust path as needed */
+}
+
